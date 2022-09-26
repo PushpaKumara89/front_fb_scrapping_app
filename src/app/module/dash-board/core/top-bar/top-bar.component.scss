@@ -1,0 +1,60 @@
+input {
+  width: 170px;
+  color: rgba(255, 255, 255, 0.507);
+  outline: 0;
+  border-width: 0 0 0px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+input:focus {
+  color: rgba(250, 242, 242, 0.678);
+  border-color: rgba(9, 17, 11, 0)
+}
+.search_outer {
+  background-color: blueviolet;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 10px //border: solid 2px blueviolet;
+}
+
+i {
+  padding: 2px;
+  color: white;
+  font-size: 20px;
+}
+.with{
+  cursor: pointer;
+}
+.ind{
+  z-index: 10;
+}
+.fnt{
+  margin: 0;
+}
+@media only screen and (max-width: 991px) {
+  .nav-search-wrap {
+    width: 90%;
+    margin-right: 0px;
+    padding-right: 8px;
+  }
+  .hambg-btn{
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .nav-search-wrap {
+    width: 82%;
+    margin-right: 0px;
+    padding-right: 8px;
+  }
+  .hambg-btn{
+    width: 18%;
+  }
+}
+
+.logout:hover{
+  font-size: 22px;
+}

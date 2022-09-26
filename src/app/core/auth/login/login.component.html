@@ -1,0 +1,18 @@
+<ng-container>
+  <div class="title"><h2>Login</h2></div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-floating mb-4">
+      <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="john">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating ">
+      <input formControlName="password" type="password" class="form-control mb-4" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button [disabled]="loginForm.invalid" type="submit" class="btn btn-success w-100 mb-5">Login</button>
+    <p>
+      <span>If You don,t have Account Here..! </span>
+      <a routerLink="/auth/register" >Register</a>
+    </p>
+  </form>
+</ng-container>

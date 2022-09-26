@@ -1,0 +1,25 @@
+<div class="main">
+  <div id="w" class="sq">
+    <div class="row">
+      <div class="search_outer col-md-12">
+        <i class="fa-solid fa-magnifying-glass">
+        </i> &nbsp;&nbsp;
+        <mat-divider style="border: 1px solid gray;" [vertical]="true"></mat-divider>&nbsp;
+        <input #sear type="search" placeholder="Search" aria-label="search" aria-describedby="basic-addon1" class="input" (keyup)="searchF(sear.value)">
+      </div>
+
+    </div>
+    <br>
+    <mat-divider></mat-divider>
+  </div>
+  <div *ngIf=" notSearch " class="notsearch p-3">
+    <p>Result Not yet</p>
+  </div>
+  <div *ngIf="!notSearch ">
+    <div *ngFor="let tem of pages" (click)="navigateToImages(tem.page_name)" class="btn-secondary pageCov" data-bs-dismiss="modal">
+      <img class="w-100" src="{{url}}{{dome}}{{tem.cover_image}} " [alt]="tem.cover_image">
+    </div>
+    <br>
+    <mat-divider></mat-divider>
+  </div>
+</div>

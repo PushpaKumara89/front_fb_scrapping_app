@@ -1,0 +1,30 @@
+<ng-container>
+  <div class="title">
+    <h2 class="p-1">Register</h2>
+  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-floating mb-3">
+      <input formControlName="name" type="text" class="form-control" id="floatingName" placeholder="John">
+      <label for="floatingName">Name</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input formControlName="password" type="password" class="form-control mb-3" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input formControlName="confirmPassword" type="password" class="form-control mb-3" id="floatingConfirm" placeholder="floating Confirm">
+      <label for="floatingConfirm">Confirm Password</label>
+    </div>
+
+    <button [disabled]="registerForm.invalid" type="submit" class="btn btn-success w-100 mb-3">Register</button>
+    <p>
+      <span>If You have Account Here.? </span>
+      <a routerLink="/auth/login" >Login</a>
+    </p>
+  </form>
+
+</ng-container>
