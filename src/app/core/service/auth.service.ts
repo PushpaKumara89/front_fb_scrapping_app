@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {environment} from "../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {FormControl, ɵFormGroupRawValue, ɵTypedOrUntyped} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +13,6 @@ export class AuthService {
 
 
   public register(name:any, username:any, password:any):Observable<any>{
-    console.log(this.url+'/user/save')
     return this.http.post(this.url+'/user/save',{
       name:name,
       username:username,
